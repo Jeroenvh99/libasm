@@ -1,0 +1,25 @@
+global ft_strcmp
+
+mov rcx, 0
+mov rax, 0
+mov r8, 0
+
+ft_strcmp:
+	mov rax, 0
+	mov rdx, 0
+	mov rcx, -1
+
+_check:
+	inc rcx
+	mov al, byte[rdi + rcx]
+	mov dl, byte[rsi + rcx]
+	cmp al, 0
+	je _return
+	cmp dl, 0
+	je _return
+	cmp al, dl
+	je _check
+
+_return:
+	sub rax, rdx
+	ret
