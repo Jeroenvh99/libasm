@@ -4,7 +4,8 @@ global ft_read
 ft_read:
 	mov rax, 0
 	syscall
-	jc error
+	test rax, rax
+	js error
 	ret
 error:
 	neg rax
