@@ -31,7 +31,7 @@ void strlen_test()
 	//printf("strlen is \t [%ld] \nft_strlen is \t [%ld]\n\n", strlen(str5), ft_strlen(str5)); // will seg
 }
 
-int		strcpy_test()
+void	strcpy_test()
 {
 	printf("\n--------------ft_strcpy---------------\n\n");
 
